@@ -7,7 +7,6 @@ import asyncio
 #config
 token = "token" #change this to ur token, https://discord.com/developers/applications
 prefix = "." #change this to prefix
-delay = "1" #might crash ur pc if less than one
 
 #edit this if u know what ur doing
 intents = discord.Intents.default()
@@ -34,7 +33,7 @@ async def send(ctx, arg1='', *, arg2=''):
    else:
     try:
 	    await member.send(f"**{arg2}**\n<#{arg1}>\n<@{member.id}>")
-	    await asyncio.sleep(int("1"))
+	    await asyncio.sleep(int("1")) #might crash if less than one
     except discord.errors.Forbidden:
 	    member_count -= 1
 	    pass
