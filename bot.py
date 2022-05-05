@@ -19,7 +19,7 @@ async def on_ready():
 	print(f"Logged in as {client.user.name}")
 
 #command
-@client.command(name="send")
+@client.command()
 async def send(ctx, arg1='', *, arg2=''):
  if ctx.channel.id == 123456789: #change this to ur channel ID
   member_count = 0
